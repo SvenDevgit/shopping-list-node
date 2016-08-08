@@ -1,3 +1,6 @@
+// server.js without using mongoDB
+// storage is defined and instantiated locally.
+
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -88,3 +91,6 @@ app.put('/items/:id', jsonParser, function(req, res){
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
+
+exports.app = app;
+exports.storage = storage;
